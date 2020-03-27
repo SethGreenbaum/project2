@@ -9,5 +9,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  Like.associate = function(models) {
+    Like.belongsTo(models.Post, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Like;
 };
