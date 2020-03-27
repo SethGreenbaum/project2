@@ -50,4 +50,24 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/posts/", function(req, res) {
+    db.Post.findAll({}).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+  app.get("/api/likes/", function(req, res) {
+    db.Like.findAll({}).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+  app.get("/api/likes/:userid", function(req, res) {
+    db.Like.findAll({
+      where: {
+        userid: req.params.userid
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
 };
