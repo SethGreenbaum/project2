@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
   function getAuthorizationToken(){
     returnedAuthorizationToken = location.hash.substr(1);
-    authorizationToken = "Bearer "+returnedAuthorizationToken.substring(returnedAuthorizationToken.indexOf("=")+1,returnedAuthorizationToken.indexOf("&"));
+    authorizationToken = "Bearer: "+ returnedAuthorizationToken.substring(returnedAuthorizationToken.indexOf("=")+1,returnedAuthorizationToken.indexOf("&"));
     console.log(authorizationToken);
   };
   getAuthorizationToken();
