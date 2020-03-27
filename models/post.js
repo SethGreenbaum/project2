@@ -25,5 +25,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  Post.associate = function(models) {
+    Post.hasMany(models.Like, {
+      onDelete: "cascade"
+    });
+  };
   return Post;
 };

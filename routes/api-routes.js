@@ -50,21 +50,49 @@ module.exports = function(app) {
       });
     }
   });
-
+  app.post("/api/posts/", function(req, res) {
+    db.Post.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+  app.post("/api/likes/", function(req, res) {
+    db.Like.create(req.body).then(function(dbLike) {
+      res.json(dbLike);
+    });
+  });
+  app.delete("/api/posts/:id", function(req, res) {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({}).then(function(dbPost) {
       res.json(dbPost);
     });
   });
   app.get("/api/likes/", function(req, res) {
-    db.Like.findAll({}).then(function(dbPost) {
-      res.json(dbPost);
+    db.Like.findAll({}).then(function(dbLike) {
+      res.json(dbLike);
     });
   });
   app.get("/api/likes/:userid", function(req, res) {
     db.Like.findAll({
       where: {
         userid: req.params.userid
+      },
+      include: [db.Post]
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+  app.put("/api/posts", function(req, res) {
+    db.Post.update(req.body, {
+      where: {
+        id: req.body.id
       }
     }).then(function(dbPost) {
       res.json(dbPost);
