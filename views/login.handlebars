@@ -1,27 +1,54 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h2>Login Form</h2>
-            <form class="login">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email-input" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password-input" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-default">Login</button>
-            </form>
-            <br />
-            <p>Or sign up <a href="/">here</a></p>
+<div class="quarantineApp">
 
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu" id="tabs">
+                <li class="menu-text"><img src="./img/vault_logo.png" alt="Vault Logo" height="30" width="30  "></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Browse</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-left">
+            <div class="search-input-animated">
+                <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+                <input type="search" placeholder="Search" name="search" class="searchbox-input" required>
+            </div>
+        </div>
+        <div class="top-bar-left" id="title-site">
+            <h2>Quarantinee</h2>
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" id="login-form">
+                <h2>Login Form</h2>
+                <form class="login">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="password-input" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                    <br />
+                    <p>Or sign up <a href="/">here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
