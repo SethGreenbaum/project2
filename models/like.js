@@ -3,11 +3,11 @@ module.exports = function(sequelize, DataTypes) {
     userid: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    postid: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
+    // postid: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // }
   });
   Like.associate = function(models) {
     Like.belongsTo(models.Post, {
