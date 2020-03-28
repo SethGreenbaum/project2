@@ -26,13 +26,13 @@
                         <li><a href="#">Browse</a></li>
                     </ul>
                 </div>
-                <div class="top-bar-right">
+                <div class="top-bar-right" id="logoutUser">
                     <ul class="menu">
                         <li><a href="/logout">Logout</a></li>
                     </ul>
                 </div>
                 <div class="top-bar-left">
-                    <div class="search-input-animated">
+                    <div class="search-input-animated" id="searchBox">
                         <span class="searchbox-icon"><i class="fa fa-search"></i></span>
                         <input type="search" placeholder="Search" name="search" class="searchbox-input" required>
                     </div>
@@ -44,17 +44,19 @@
             <!-- End Top Bar -->
 
             <!-- Start of App here -->
+            <!-- Authorize Twitch -->
 
-            <div class="feed-page">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <h2>Welcome <span class="member-name"></span></h2>
-                            <a href="#" class="button">Authorize Twitch</a>
-                        </div>
+
+            <div class="container" id="twitchAuth">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <h2>Welcome <span class="member-name"></span></h2>
+                        <a href="#" class="button">Authorize Twitch</a>
                     </div>
                 </div>
+            </div>
 
+            <div class="feed-page" id="feed-page">
                 <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
                     <ul class="orbit-container">
                         <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous
@@ -67,34 +69,37 @@
                     </ul>
                 </div>
 
-                <h2 class="text-center">Add a Post!</h2>
+                <div id="postForm">
 
-                <form class="create-form text-center">
+                    <h2 class="text-center">Add a Post!</h2>
 
-                    <div class="form-group">
-                        <label for="auth">Author:</label>
-                        <input type="text" id="auth" name="author">
-                    </div>
+                    <form class="create-form text-center">
 
-                    <div class="form-group">
-                        <label for="quo">Edit Post:</label>
-                        <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="auth">Author:</label>
+                            <input type="text" id="auth" name="author">
+                        </div>
 
-                    <button type="submit">Add Post</button>
-                </form>
+                        <div class="form-group">
+                            <label for="quo">Edit Post:</label>
+                            <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+                        </div>
+
+                        <a class="button" type="submit" id="addPost">Add Post</a>
+
+                    </form>
+
+                </div>
 
                 <div class="row column text-center">
                     <h2>Recent Feeds</h2>
-                    <div id="user.posts">
-                        <div class="row">
-                            <div class="col-md-12 blog-container">
-                            </div>
+                    <div class="row">
+                        <div class="col-md-12 blog-container" id="user.posts">
                         </div>
                     </div>
                 </div>
 
-                <div class="row column text-center">
+                <div class="row column text-center" id="suggestions">
                     <h2>Suggestions</h2>
                     <hr>
                 </div>
