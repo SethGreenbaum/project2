@@ -47,7 +47,7 @@ module.exports = function(app) {
         },
         include: [db.Post, db.Like]
       }).then(function(hist) {
-        console.log(JSON.stringify(hist))
+        console.log(JSON.stringify(hist));
         res.render("members", {});
       });
     }
