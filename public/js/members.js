@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
   });
   var twitch = $(".twitch");
-  var clientId = "udzdn6yna0fjfyrq4luu79nmxr0o3n";
+  // var clientId = "udzdn6yna0fjfyrq4luu79nmxr0o3n";
   var redirectUri = window.location.href;
   var returnedAuthorizationToken;
   var authorizationToken;
@@ -66,14 +66,14 @@ $(document).ready(function() {
       clientId +
       "&redirect_uri=" +
       redirectUri +
-      "&response_type=token&scope=viewing_activity_read";
+      "&response_type=token&scope=user:read:broadcast";
     window.location.href = authUrl;
   });
 
   function getAuthorizationToken() {
     returnedAuthorizationToken = location.hash.substr(1);
     authorizationToken =
-      "Bearer: " +
+      "Bearer " +
       returnedAuthorizationToken.substring(
         returnedAuthorizationToken.indexOf("=") + 1,
         returnedAuthorizationToken.indexOf("&")
@@ -83,14 +83,14 @@ $(document).ready(function() {
   getAuthorizationToken();
 
   $.ajax({
-    url: "https://api.twitch.tv/helix/streams",
+    url: "https://api.twitch.tv/helix/clips?game_id=488191",
     type: "GET",
     headers: {
-      "Client-ID": clientId,
+      // "Client-ID": clientId,
       Authorization: authorizationToken
     },
     success: function(data) {
-      console.log(data);
+      console.log(data)
     }
   });
 });
