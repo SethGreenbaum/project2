@@ -16,11 +16,20 @@ body {
   background-color: #23272a;
 }
 
-.feed-style {
+#top-streams {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#postForm {
   padding-left: 30%;
   padding-right: 30%;
 }
 
+#suggestions {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 .form-control,
 .searchbox-input {
@@ -38,8 +47,6 @@ label {
   padding-right: 30%;
 }
 
-
 a {
   color: #7289da;
-
 }
