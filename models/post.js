@@ -19,15 +19,20 @@ module.exports = function(sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING
-    },
-    userid: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
+    // userid: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // }
   });
   Post.associate = function(models) {
     Post.hasMany(models.Like, {
       onDelete: "cascade"
+    });
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   };
   return Post;
