@@ -1,9 +1,9 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize) {
   var Like = sequelize.define("Like", {
-    userid: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    }
+    // userid: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // }
     // postid: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false
@@ -11,6 +11,11 @@ module.exports = function(sequelize, DataTypes) {
   });
   Like.associate = function(models) {
     Like.belongsTo(models.Post, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+    Like.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }

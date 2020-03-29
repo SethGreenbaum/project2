@@ -55,6 +55,16 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+  app.get("/api/history/:userid", function(req, res) {
+    db.User.findAll({
+      where: {
+        id: req.params.userid
+      },
+      include: [db.Post, db.Like]
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
   app.post("/api/likes/", function(req, res) {
     db.Like.create(req.body).then(function(dbLike) {
       res.json(dbLike);
