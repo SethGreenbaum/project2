@@ -31,6 +31,7 @@ $(document).ready(function() {
       "&response_type=token&scope=viewing_activity_read";
     window.location.href = authUrl;
   });
+
   function getAuthorizationToken() {
     returnedAuthorizationToken = location.hash.substr(1);
     authorizationToken =

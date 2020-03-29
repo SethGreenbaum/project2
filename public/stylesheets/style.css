@@ -16,7 +16,7 @@ body {
   background-color: #23272a;
 }
 
-.feed-page {
+.feed-style {
   padding-left: 30%;
   padding-right: 30%;
 }
@@ -27,7 +27,7 @@ body {
   background-color: #2c2f33;
 }
 
-h2,
+h2, h3, h5,
 label {
   color: #7289da;
 }
