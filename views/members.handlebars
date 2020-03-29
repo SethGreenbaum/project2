@@ -1,7 +1,7 @@
 <div class="quarantineApp">
   <!-- Begin nav bar -->
 
-  <div class="title-bar-left">
+  <div class="title-bar-left" id="nav-bar">
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
@@ -13,7 +13,7 @@
           <li><a href="#">Browse</a></li>
         </ul>
       </div>
-      <div class="top-bar-right">
+      <div class="top-bar-right" id="logoutUser">
         <ul class="menu">
           <li><a href="/logout">Logout</a></li>
         </ul>
@@ -35,7 +35,7 @@
   <!--Start of App here-->
   <!-- Authorize Twitch-->
 
-  <div class="container">
+  <div class="container" id="twitchAuth">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
@@ -46,7 +46,7 @@
 
   <!-- Jumbo-tron where the streams would be displayed,
   I may change jumbo-tron to something simpler-->
-  <div class="feed-page">
+  <div class="feed-style" id="top-streams">
     <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
       <ul class="orbit-container">
         <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous
@@ -60,31 +60,35 @@
 
     <!-- Here you can create a post-->
 
-    <h2 class="text-center">Add a Post!</h2>
+    <div id="postForm">
 
-    <form class="create-form text-center">
+      <h3 class="text-center">Add to our live feed, say anything!</h3>
+      <h5 class="text-center">Share your at home quarantine adventures!</h5>
 
-      <div class="form-group">
-        <label for="auth">Author:</label>
-        <input type="text" id="auth" name="author">
-      </div>
+      <form class="create-form text-center">
 
-      <div class="form-group">
-        <label for="quo">Edit Post:</label>
-        <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-      </div>
+        <div class="form-group" id="authorId">
+          <label for="auth">Author:</label>
+          <input type="text" id="auth" name="author">
+        </div>
 
-      <a class="button" type="submit" id="addPost">Add Post</a>
-    </form>
+        <div class="form-group" id="editId">
+          <label for="quo">Edit Post:</label>
+          <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+        </div>
+
+        <a class="button" type="submit" id="postBtn">Add Post</a>
+
+      </form>
+
+    </div>
 
     <!-- A display of recent posts -->
 
     <div class="row column text-center">
       <h2>Recent Feeds</h2>
-      <div id="user.posts">
-        <div class="row">
-          <div class="col-md-12 blog-container">
-          </div>
+      <div class="row">
+        <div class="col-md-12 blog-container" id="user.posts">
         </div>
       </div>
     </div>
@@ -95,6 +99,7 @@
       <h2>Suggestions</h2>
       <hr>
     </div>
+    <!-- Profile tabs -->
 
     <div class="row small-up-2 large-up-4">
       <div class="column" id="Profile1">
