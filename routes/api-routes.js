@@ -71,12 +71,18 @@ module.exports = function(app) {
     });
   });
   app.delete("/api/posts/:id", function(req, res) {
-    db.Post.destroy({
+    db.Like.destroy({
       where: {
-        id: req.params.id
+        PostId: req.params.id
       }
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function() {
+      db.Post.destroy({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbPost) {
+        res.json(dbPost);
+      });
     });
   });
   app.get("/api/posts/", function(req, res) {
