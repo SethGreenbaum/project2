@@ -40,15 +40,24 @@ module.exports = function(app) {
       res.json({});
     } else {
       // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      db.User.findAll({
+      // Sending back a password, enpven a hashed password, isn't a good idea
+      db.Like.findAll({
         where: {
-          id: req.user.id
+          UserId: req.user.id
         },
-        include: [db.Post, db.Like]
+        include: [db.Post]
       }).then(function(hist) {
-        console.log(JSON.stringify(hist));
-        res.render("members", {});
+        db.Post.findAll({}).then(function(posts) {
+          db.Post.findAll({
+            where: {
+              UserId: req.user.id
+            }
+          }).then(function(mine) {
+            var homePage = { likes: hist, feed: posts, postHist: mine };
+            console.log(homePage);
+            res.render("members", homePage);
+          });
+        });
       });
     }
   });
