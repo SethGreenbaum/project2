@@ -90,7 +90,7 @@ $(document).ready(function() {
       Authorization: authorizationToken
     },
     success: function(data) {
-      console.log(data)
+      console.log(data);
     }
   });
 });
