@@ -31,10 +31,7 @@ $(document).ready(function() {
       "&response_type=token&scope=viewing_activity_read";
     window.location.href = authUrl;
   });
-<<<<<<< HEAD
 
-=======
->>>>>>> master
   function getAuthorizationToken() {
     returnedAuthorizationToken = location.hash.substr(1);
     authorizationToken =
@@ -46,10 +43,7 @@ $(document).ready(function() {
     console.log(authorizationToken);
   }
   getAuthorizationToken();
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   $.ajax({
     url: "https://api.twitch.tv/helix/streams",
     type: "GET",
