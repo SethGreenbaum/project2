@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
   });
   var twitch = $(".twitch");
-  // var clientId = "udzdn6yna0fjfyrq4luu79nmxr0o3n";
+  var clientId = "udzdn6yna0fjfyrq4luu79nmxr0o3n";
   var redirectUri = window.location.href;
   var returnedAuthorizationToken;
   var authorizationToken;
