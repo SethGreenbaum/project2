@@ -90,11 +90,10 @@
       <!-- A display of recent posts -->
   
       <div class="row column text-center">
-        <h2>Recent Feeds</h2>
         <div class="row">
           <div class="col-md-12 blog-container" id="user.posts">
              <!-- Handlebars for All Posts Feed Seth-->
-             <h2>Feed</h2>
+            <h2>Feed</h2>
         <div class="col-md-12 blog-container">
           {{#each posts}}
           {{> posts/post-block}}
@@ -150,34 +149,60 @@
       </div>
     <!-- Start of suggestions tab -->
     <div class="row column text-center">
-      <h2>Suggestions</h2>
+      <h2>Top Twitch Streams</h2>
       <hr>
     </div>
     <!-- Profile tabs -->
-    <div class="row small-up-2 large-up-4" id="suggestions">
+    <div class="row small-up-2 large-up-4" id="streams">
       <div class="column" id="Profile1">
-        <img class="thumbnail" src="./layouts/img/rust_sample.PNG">
-        <h5 id="user_name"></h5>
-        <p></p>
-        <a href="/twitch.tv/${{this.id}}" class="button expanded">User Page</a>
+        <img class="thumbnail" src="/imgs/img/rust_sample.PNG" id="thumb1">
+        <h5 id="user_name1"></h5>
+        <p id="streamname1"></p>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="link1">Watch Stream</a>
       </div>
       <div class="column" id="Profile2">
-        <img class="thumbnail" src="./layouts/img/overwatch_sample.PNG">
-        <h5 id="user_name"></h5>
-        <p></p>
-        <a href="/twitch.tv/${{this.id}}" class="button expanded">User Page</a>
+        <img class="thumbnail" src="/imgs/img/overwatch_sample.PNG" id="thumb2">
+        <h5 id="user_name2"></h5>
+        <p id="streamname2"></p>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="link2">Watch Stream</a>
       </div>
       <div class="column" id="Profile3">
-        <img class="thumbnail" src="./layouts/img/apex_sample.PNG">
-        <h5 id="user_name"></h5>
-        <p></p>
-        <a href="/twitch.tv/${{this.id}}" class="button expanded">User Page</a>
+        <img class="thumbnail" src="/imgs/img/apex_sample.PNG" id="thumb3">
+        <h5 id="user_name3"></h5>
+        <p id="streamname3"></p>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="link3">Watch Stream</a>
       </div>
       <div class="column" id="Profile4">
-        <img class="thumbnail" src="./layouts/img/minecraft_sample.PNG">
-        <h5 id="user_name"></h5>
-        <p></p>
-        <a href="/twitch.tv/{{this.id}}" class="button expanded">User Page</a>
+        <img class="thumbnail" src="/imgs/img/minecraft_sample.PNG" id="thumb4">
+        <h5 id="user_name4"></h5>
+        <p id="streamname4"></p>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="link4">Watch Stream</a>
+      </div>
+    </div>
+        <div class="row column text-center">
+    <h2>Top Twitch Games</h2>
+      <hr>
+    </div>
+        <div class="row small-up-2 large-up-4" id="games">
+      <div class="column">
+        <img class="thumbnail" src="/imgs/img/rust_sample.PNG" id="gamethumb1">
+        <h5 id="game1"></h5>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="gamelink1">Browse Streams</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="/imgs/img/rust_sample.PNG" id="gamethumb2">
+        <h5 id="game2"></h5>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="gamelink2">Browse Streams</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="/imgs/img/rust_sample.PNG" id="gamethumb3">
+        <h5 id="game3"></h5>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="gamelink3">Browse Streams</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="/imgs/img/rust_sample.PNG" id="gamethumb4">
+        <h5 id="game4"></h5>
+        <a href="https://www.twitch.tv/" class="button expanded stream" id="gamelink4">Browse Streams</a>
       </div>
     </div>
   </div>

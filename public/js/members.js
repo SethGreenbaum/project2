@@ -83,7 +83,7 @@ $(document).ready(function() {
   getAuthorizationToken();
 
   $.ajax({
-    url: "https://api.twitch.tv/helix/clips?game_id=488191",
+    url: "https://api.twitch.tv/helix/streams",
     type: "GET",
     headers: {
       // "Client-ID": clientId,
@@ -91,6 +91,73 @@ $(document).ready(function() {
     },
     success: function(data) {
       console.log(data);
+      console.log(data.data[0].thumbnail_url);
+      var qOne = "https://www.twitch.tv/" + data.data[0].user_name;
+      var qTwo = "https://www.twitch.tv/" + data.data[1].user_name;
+      var qThree = "https://www.twitch.tv/" + data.data[2].user_name;
+      var qFour = "https://www.twitch.tv/" + data.data[3].user_name;
+      var thumbUrl1 = data.data[0].thumbnail_url;
+      var newThumb1 = thumbUrl1.replace("-{width}x{height}", "");
+      var thumbUrl2 = data.data[1].thumbnail_url;
+      var newThumb2 = thumbUrl2.replace("-{width}x{height}", "");
+      var thumbUrl3 = data.data[2].thumbnail_url;
+      var newThumb3 = thumbUrl3.replace("-{width}x{height}", "");
+      var thumbUrl4 = data.data[3].thumbnail_url;
+      var newThumb4 = thumbUrl4.replace("-{width}x{height}", "");
+      console.log(newThumb1);
+      $("#thumb1").attr("src", newThumb1);
+      $("#thumb2").attr("src", newThumb2);
+      $("#thumb3").attr("src", newThumb3);
+      $("#thumb4").attr("src", newThumb4);
+      $("#link1").attr("href", qOne);
+      $("#link2").attr("href", qTwo);
+      $("#link3").attr("href", qThree);
+      $("#link4").attr("href", qFour);
+      $("#streamname1").text(data.data[0].title);
+      $("#streamname2").text(data.data[1].title);
+      $("#streamname3").text(data.data[2].title);
+      $("#streamname4").text(data.data[3].title);
+      $("#user_name1").text(data.data[0].user_name);
+      $("#user_name2").text(data.data[1].user_name);
+      $("#user_name3").text(data.data[2].user_name);
+      $("#user_name4").text(data.data[3].user_name);
+    }
+  });
+  $.ajax({
+    url: "https://api.twitch.tv/helix/games/top",
+    type: "GET",
+    headers: {
+      // "Client-ID": clientId,
+      Authorization: authorizationToken
+    },
+    success: function(data) {
+      console.log(data);
+      console.log(data.data[0].name);
+      var qOne = "https://www.twitch.tv/directory/game/" + data.data[0].name;
+      var qTwo = "https://www.twitch.tv/directory/game/" + data.data[1].name;
+      var qThree = "https://www.twitch.tv/directory/game/" + data.data[2].name;
+      var qFour = "https://www.twitch.tv/directory/game/" + data.data[3].name;
+      var thumbUrl1 = data.data[0].box_art_url;
+      var newThumb1 = thumbUrl1.replace("-{width}x{height}", "");
+      var thumbUrl2 = data.data[1].box_art_url;
+      var newThumb2 = thumbUrl2.replace("-{width}x{height}", "");
+      var thumbUrl3 = data.data[2].box_art_url;
+      var newThumb3 = thumbUrl3.replace("-{width}x{height}", "");
+      var thumbUrl4 = data.data[3].box_art_url;
+      var newThumb4 = thumbUrl4.replace("-{width}x{height}", "");
+      console.log(newThumb1);
+      $("#gamethumb1").attr("src", newThumb1);
+      $("#gamethumb2").attr("src", newThumb2);
+      $("#gamethumb3").attr("src", newThumb3);
+      $("#gamethumb4").attr("src", newThumb4);
+      $("#gamelink1").attr("href", qOne);
+      $("#gamelink2").attr("href", qTwo);
+      $("#gamelink3").attr("href", qThree);
+      $("#gamelink4").attr("href", qFour);
+      $("#game1").text(data.data[0].name);
+      $("#game2").text(data.data[1].name);
+      $("#game3").text(data.data[2].name);
+      $("#game4").text(data.data[3].name);
     }
   });
 });
