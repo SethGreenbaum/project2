@@ -36,24 +36,23 @@ module.exports = function(app) {
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
     if (!req.user) {
-      // The user is not logged in, send back an empty object
       res.json({});
     } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, enpven a hashed password, isn't a good idea
       db.Like.findAll({
         where: {
           UserId: req.user.id
         },
-        include: [db.Post]
-      }).then(function(hist) {
-        db.Post.findAll({}).then(function(posts) {
+        include: [db.Post, db.User]
+      }).then(function(like) {
+        db.Post.findAll({
+          include: [db.User]
+        }).then(function(post) {
           db.Post.findAll({
             where: {
               UserId: req.user.id
             }
           }).then(function(mine) {
-            var homePage = { likes: hist, feed: posts, postHist: mine };
+            var homePage = { likes: like, posts: post, postHist: mine };
             console.log(homePage);
             res.render("members", homePage);
           });

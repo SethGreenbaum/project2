@@ -13,7 +13,7 @@
       </div>
       <div class="top-bar-right" id="logoutUser">
         <ul class="menu">
-          <li><a href="/landingPage">Logout</a></li>
+          <li><a href="/">Logout</a></li>
         </ul>
       </div>
       <div class="top-bar-left">
@@ -95,7 +95,12 @@
           <div class="col-md-12 blog-container" id="user.posts">
              <!-- Handlebars for All Posts Feed Seth-->
              <h2>Feed</h2>
-            <ul>
+        <div class="col-md-12 blog-container">
+          {{#each posts}}
+          {{> posts/post-block}}
+          {{/each}}
+        </div>
+            {{!-- <ul>
               {{#each feed}}
               <li>
                 <p>
@@ -105,10 +110,15 @@
                 </p>
               </li>
               {{/each}}
-            </ul>
+            </ul> --}}
               <!-- Handlebars for All User Likes  Seth-->
               <h2>Likes</h2>
-            <ul>
+        <div class="col-md-12 blog-container">
+          {{#each likes}}
+          {{> likes/like-block}}
+          {{/each}}
+        </div>
+            {{!-- <ul>
               {{#each likes}}
               <li>
                 <p>
@@ -116,10 +126,15 @@
                 </p>
               </li>
               {{/each}}
-            </ul>
+            </ul> --}}
               <!-- Handlebars for All User Posts Seth -->
               <h2>Your Posts</h2>
-            <ul>
+        <div class="col-md-12 blog-container">
+          {{#each postHist}}
+          {{> postHist/mine-block}}
+          {{/each}}
+        </div>
+            {{!-- <ul>
               {{#each postHist}}
               <li>
                 <p>
@@ -129,7 +144,7 @@
                 </p>
               </li>
               {{/each}}
-            </ul>
+            </ul> --}}
           </div>
         </div>
       </div>
