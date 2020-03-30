@@ -91,12 +91,13 @@
   
       <div class="row column text-center">
         <div class="row">
-          <div class="col-md-12 blog-container" id="user.posts">
+          <div class="col-md-12" id="user.posts">
              <!-- Handlebars for All Posts Feed Seth-->
             <h2>Feed</h2>
-        <div class="col-md-12 blog-container">
+        <div class="col-md-12 post-style" id="recentFeed">
           {{#each posts}}
           {{> posts/post-block}}
+          <hr>
           {{/each}}
         </div>
             {{!-- <ul>
@@ -112,9 +113,10 @@
             </ul> --}}
               <!-- Handlebars for All User Likes  Seth-->
               <h2>Likes</h2>
-        <div class="col-md-12 blog-container">
+        <div class="col-md-12 post-style" id="likedPosts">
           {{#each likes}}
           {{> likes/like-block}}
+          <hr>
           {{/each}}
         </div>
             {{!-- <ul>
@@ -128,10 +130,14 @@
             </ul> --}}
               <!-- Handlebars for All User Posts Seth -->
               <h2>Your Posts</h2>
-        <div class="col-md-12 blog-container">
+              <br>
+        <div class="col-md-12 yourpost-style" id="yourPosts">
+          <div>
           {{#each postHist}}
           {{> postHist/mine-block}}
+          <hr>
           {{/each}}
+          </div>
         </div>
             {{!-- <ul>
               {{#each postHist}}

@@ -12,6 +12,33 @@ form.login {
   padding-left: 8%;
 }
 
+
+.card {
+  background-color: white;
+  padding: 10px;
+  border: 5px solid #7289da;
+  border-radius: 25px;
+  
+}
+.post-style {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.yourpost-style {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.card-divider {
+  background-color: grey;
+  padding: 20px;
+}
+
+.card-section {
+  padding: 20px;
+}
+
 body {
   background-color: #23272a;
 }
@@ -19,6 +46,21 @@ body {
 #top-streams {
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.mypost-header {
+  font-size: 20px;
+  background-color: #23272a;
+}
+
+.mypost-body {
+  border: 1px black;
+  border-radius: 2px;
+}
+
+
+hr {
+  border: 10px solid #23272a;
 }
 
 #postForm {
@@ -49,4 +91,33 @@ label {
 
 a {
   color: #7289da;
+}
+
+textarea {
+  max-height: 100px;
+}
+
+#qua {
+  max-height: 10px;
+}
+
+#que {
+  max-height: 10px;
+}
+
+button.delete {
+  font-size: 13px;
+  color: #ff0000;
+  background-color: black;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+button.like {
+  font-size: 13px;
+  color: #43f74c;
+  background-color: #7289da;
+  padding: 5px;
+  border-radius: 25px;
+  
 }
