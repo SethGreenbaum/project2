@@ -1,9 +1,8 @@
 <div class="quarantineApp">
   <!-- Begin nav bar -->
-  <div class="title-bar-left" id="nav-bar">
-    <div class="top-bar">
+    <div class="top-bar" id="nav-bar">
       <div class="top-bar-left">
-        <ul class="menu">
+        <ul class="menu" id="tabs">
           <li class="menu-text"><button type="button" data-open="offCanvasLeft"><img src="vault_logo.png"
                 alt="Vault Logo" height="30" width="30">
             </button>
@@ -14,7 +13,7 @@
       </div>
       <div class="top-bar-right" id="logoutUser">
         <ul class="menu">
-          <li><a href="/logout">Logout</a></li>
+          <li><a href="/landingPage">Logout</a></li>
         </ul>
       </div>
       <div class="top-bar-left">
@@ -27,7 +26,6 @@
         <h2>Quarantinee</h2>
       </div>
     </div>
-  </div>
   <!-- End nav bar-->
   <!--Start of App here-->
   <!-- Authorize Twitch-->
@@ -39,6 +37,7 @@
       </div>
     </div>
   </div>
+
   <div class="feed-style">
     <div id="top-streams">
       <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
@@ -48,7 +47,7 @@
           <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next
               Slide</span>&#9654;</button>
           <li class="orbit-slide is-active">
-            <img src="https://placehold.it/2000x750" height="50%" width="2000px">
+            <img src="https://placehold.it/2000x750" height="50%" width="1000px">
           </li>
         </ul>
       </div>
