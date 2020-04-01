@@ -9,25 +9,71 @@ form.login {
 }
 
 #title-site {
-  padding-left: 8%;
+  padding-left: 10%;
 }
 
-
 .card {
+  background-color: white;
+  border: 5px solid #7289da;
+  border-radius: 25px;
+}
+
+.login-card,
+.signup-card {
   background-color: white;
   padding: 10px;
   border: 5px solid #7289da;
   border-radius: 25px;
-  
+  margin-top: 50px;
+  width: 40%;
 }
+
+.signup,
+.login,
+.form-header {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#login-btn,
+#signup-btn {
+  color: rgb(13, 224, 13);
+  font-weight: bold;
+  background-color: black;
+  padding: 5px;
+  border-radius: 25px;
+}
+
 .post-style {
   padding-left: 30%;
   padding-right: 30%;
 }
 
-.yourpost-style {
-  padding-left: 10%;
-  padding-right: 10%;
+/* .yourpost-style {
+  padding-left: 30%;
+  padding-right: 30%;
+} */
+
+/* #Profile1.column,
+#Profile2.column,
+#Profile3.column,
+#Profile4.column {
+
+} */
+
+#recentFeed {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#likedPosts {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#yourPosts {
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 .card-divider {
@@ -54,8 +100,11 @@ body {
 }
 
 .mypost-body {
-  border: 1px black;
-  border-radius: 2px;
+  padding: 5px;
+}
+
+p.mypost-body {
+  font-size: 14px;
 }
 
 
@@ -63,9 +112,19 @@ hr {
   border: 10px solid #23272a;
 }
 
+.create-form {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 #postForm {
-  padding-left: 30%;
-  padding-right: 30%;
+  margin-top: 10px;
+  background-color: white;
+  background-position: center;
+  width: 50%;
+  border: 5px solid #7289da;
+  border-radius: 25px;
+  margin-left: 25%;
 }
 
 #suggestions {
@@ -78,15 +137,11 @@ hr {
   background-color: #2c2f33;
 }
 
-h2, h3, h5,
+h2,
+h3,
+h5,
 label {
   color: #7289da;
-}
-
-#signup-form,
-#login-form {
-  padding-left: 30%;
-  padding-right: 30%;
 }
 
 a {
@@ -119,5 +174,9 @@ button.like {
   background-color: #7289da;
   padding: 5px;
   border-radius: 25px;
-  
+}
+
+#cocktail-btn,
+#twitch-btn {
+  border-radius: 25px;
 }

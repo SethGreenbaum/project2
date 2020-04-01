@@ -1,15 +1,15 @@
-<div class="row card">
-    <div class="col-md-6">
-        <div class="col-md-3">
-        <p>{{this.dataValues.category}}</p>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <div class="col-md-3">
+                <p>{{this.dataValues.category}}</p>
+            </div>
+            <h2 class="mypost-header">{{this.dataValues.header}}</h2>
+            <p class="mypost-body">{{this.dataValues.body}}</p>
+            {{#if this.dataValues.link}}
+            <a href={{this.dataValues.link}}>{{this.dataValues.link}}</a>
+            {{/if}}
+        </div>
     </div>
-        <h2 class="mypost-header">{{this.dataValues.header}}</h2>
-        <p class="mypost-body">{{this.dataValues.body}}</p>
-        {{#if this.dataValues.link}}
-        <a href={{this.dataValues.link}}>{{this.dataValues.link}}</a>
-        {{/if}}
-    </div>
-    <div>
     <button data-postid="{{this.dataValues.id}}" class="delete">Delete</button>
-    </div>
 </div>
