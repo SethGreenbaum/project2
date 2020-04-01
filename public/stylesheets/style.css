@@ -13,19 +13,23 @@ form.login {
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(36, 36, 36);;
   border: 5px solid #7289da;
   border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,2),0 6px 6px rgba(0,0,0,0.23);
+  margin-top: 10px;
+  color: rgb(172, 172, 172);
 }
 
 .login-card,
 .signup-card {
-  background-color: white;
+  background-color: rgb(36, 36, 36);
   padding: 10px;
   border: 5px solid #7289da;
   border-radius: 25px;
   margin-top: 50px;
   width: 40%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)
 }
 
 .signup,
@@ -54,12 +58,14 @@ form.login {
   padding-right: 30%;
 } */
 
-/* #Profile1.column,
+#Profile1.column,
 #Profile2.column,
 #Profile3.column,
 #Profile4.column {
-
-} */
+  margin-top: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 25px;
+}
 
 #recentFeed {
   padding-left: 30%;
@@ -119,12 +125,14 @@ hr {
 
 #postForm {
   margin-top: 10px;
-  background-color: white;
+  background-color: rgb(36, 36, 36);;
   background-position: center;
   width: 50%;
   border: 5px solid #7289da;
   border-radius: 25px;
   margin-left: 25%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)
+
 }
 
 #suggestions {
