@@ -3,6 +3,11 @@ form.login {
   margin-top: 20px;
 }
 
+#banner-img {
+  border: 5px solid black;
+  border-radius: 25px;
+}
+
 .top-bar,
 .top-bar ul {
   background-color: black;
@@ -130,6 +135,7 @@ hr {
 .create-form {
   padding-left: 15%;
   padding-right: 15%;
+  
 }
 
 #postForm {
