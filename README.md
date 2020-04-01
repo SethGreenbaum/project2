@@ -7,7 +7,8 @@ Click here for deployed app: https://guis-electric-boogaloo.herokuapp.com/
 
 Clone repository on local computer using GitBash or Terminal.
 1) git clone https://github.com/PhatOrbs/GUIsProject1.git 
-2) 
+2) npm install
+3) npm run start
 
 
 ### Prerequisites
