@@ -9,6 +9,7 @@
             {{#if this.Post.dataValues.link}}
             <a href={{this.Post.dataValues.link}}>{{this.Post.dataValues.link}}</a>
             {{/if}}
+            <p>Posted By: {{this.User.dataValues.email}}</p>
         </div>
     </div>
     <button data-postid="{{this.Posr.dataValues.id}}" class="like">Like</button>

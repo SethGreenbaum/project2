@@ -8,6 +8,7 @@
         {{#if this.dataValues.link}}
         <a href={{this.dataValues.link}}>{{this.dataValues.link}}</a>
         {{/if}}
+        <p>Posted By: {{this.User.dataValues.email}}</p>
     </div>
     <button data-postid="{{this.dataValues.id}}" class="like">Like</button>
 </div>
