@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;}
+
+.banner-text {
+    width: 100%;
+    position: absolute;
+    z-index: 500;
+}
+
+.banner-text ul {
+    height: 50%;
+    float: right;
+    padding-right: 5%;
+}
+
+.banner-text ul li {
+    display: inline-block;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.banner-text ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner-text h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+
+    margin-top: 10%;
+}
+
+.banner-text p {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 1%;
+}
+
+.banner-text h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 1%;
+}
+
+.banner-text h3 a {
+    color: #e60073;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #3366cc;
+  }
+
+.animation-area {
+    /* background: linear-gradient(to left, #8942a8, #ba382f); */
+    background: linear-gradient(to left, #23272a, #2c2f33, #99aab5, #7289da);
+    width: 100%;
+    height: 100vh;
+}
+
+.box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background-image: url(../imgs/logos/youtube.png);
+}
+
+.box-area li:nth-child(2) {
+    left: 12%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+    background-image: url(../imgs/logos/hulu.png);
+}
+
+.box-area li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+    background-image: url(../imgs/logos/netflix.png);
+}
+
+.box-area li:nth-child(4) {
+    left: 38%;
+    width: 200px;
+    height: 200px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    background-image: url(../imgs/logos/twitch.jpg);
+}
+
+.box-area li:nth-child(5) {
+    left: 65%;
+    width: 65px;
+    height: 65px;
+    animation-delay: 0s;
+    background-image: url(../imgs/logos/prime-video2.png);
+}
+
+.box-area li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+    background-image: url(../imgs/logos/nintendo.png);
+}
+
+.box-area li:nth-child(7) {
+    left: 30%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 2.5s;
+    animation-duration: 20s;
+    background-image: url(../imgs/logos/xbox.png);
+}
+
+.box-area li:nth-child(8) {
+    left: 75%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 0s;
+    animation-duration: 12s;
+    background-image: url(../imgs/logos/ps-logo.png);
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+
+}
