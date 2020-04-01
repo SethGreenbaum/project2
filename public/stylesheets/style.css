@@ -16,7 +16,7 @@ form.login {
   background-color: white;
   border: 5px solid #7289da;
   border-radius: 25px;
-  box-shadow: 0 10px 20px rgba(0,0,0,2),0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin-top: 10px;
 }
 
@@ -28,7 +28,7 @@ form.login {
   border-radius: 25px;
   margin-top: 50px;
   width: 40%;
-  box-shadow: 0 10px 20px rgba(0,0,0,2),0 6px 6px rgba(0,0,0,0.23)
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23)
 }
 
 .signup,
@@ -62,7 +62,7 @@ form.login {
 #Profile3.column,
 #Profile4.column {
   margin-top: 10px;
-  box-shadow: 0 10px 20px rgba(0,0,0,2),0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 25px;
   border: 2px solid black;
   background-color: rgb(36, 36, 36);
@@ -140,8 +140,7 @@ hr {
   border: 5px solid #7289da;
   border-radius: 25px;
   margin-left: 25%;
-  box-shadow: 0 10px 20px rgba(0,0,0,2),0 6px 6px rgba(0,0,0,0.23)
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23)
 }
 
 #suggestions {
