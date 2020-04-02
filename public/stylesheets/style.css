@@ -172,6 +172,11 @@ a {
 
 textarea {
   max-height: 100px;
+  border-radius: 25px;
+}
+
+#auth {
+  border-radius: 25px;
 }
 
 #qua {
@@ -202,3 +207,4 @@ button.like {
 #twitch-btn {
   border-radius: 25px;
 }
+
