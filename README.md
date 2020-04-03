@@ -41,4 +41,4 @@ VS Code, MySQL Workbench, Heroku, Google Chrome
 
 ## Acknowledgments
 
-* Instructors and TA's
+* Instructors and TA's, DU
